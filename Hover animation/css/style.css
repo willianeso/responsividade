@@ -1,0 +1,167 @@
+:root{
+    --tyrian-purple: #4F0B28ff;
+--davys-gray: #5B5965ff;
+--night: #110D12ff;
+--tyrian-purple-2: #3A021Bff;
+--rose-red: #C11952ff;
+--raspberry-rose: #AB2C67ff;
+--english-violet: #4B3348ff;
+--tyrian-purple-3: #5B0B2Eff;
+
+}
+
+@font-face {
+    font-family: 'Arcane';
+    src: url(../fontes/ArcaneNine.otf);
+}
+
+@font-face {
+    font-family: 'OpenSans-Italic';
+    src: url(../fontes/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url(../fontes/OpenSans.ttf);
+}
+
+/* FONTE NOME */
+h1 {
+    
+    font-family: 'Arcane';
+    font-size: 40px;
+    
+}
+
+/* FONTE DESENVOLVEDORA*/
+h2 {
+    font-family: 'OpenSans';
+    text-transform: uppercase;
+    /* font-size: large; */
+}
+
+/* FONTE EXPERIÊNCIA PROFISSIONAL */
+h3{
+    font-family: "OpenSans";
+}
+
+/* FONTE TODAS AS EXPERIÊNCIAS */
+h4{
+    font-family: "OpenSans-Italic";
+}
+
+/* FONTE REDES SOCIAIS */
+h5{
+    font-family: "OpenSans";
+}
+
+/* FONTE INSTA E WHATS */
+p {
+    font-style: oblique;
+    color: black;    
+}
+
+/* LINHA */
+hr {
+    width: 70%;
+    background: var(--night);
+    height: 2px;  
+}
+
+
+/* ZERANDO AS MARGENS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TAMANHO DA IMAGEM INSTA */
+#insta{
+    width: 20px;
+}
+
+/* TAMANHO DA IMAGEM WHATS */
+#whats{
+    width: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(var(--english-violet), var(--night), var(--tyrian-purple-2));
+    
+}
+
+/* DIV CENTRAL */
+.card{
+    display: flex;
+    justify-content: center;
+    width: 350px;
+    height: 300px;
+    position: relative;
+    background: rgb(171, 44, 103);
+    border-radius: 20px;
+    box-shadow: 0px, 35px, 80px rgba(0, 0, 0, 0 0.15);
+    transition: 0.5s;
+
+}
+
+/* AUMENTAR A ALTURA DA DIV CENTRAL */
+.card:hover{
+    height: 800px;
+}
+
+/* DIMINUIR O TAMANHO DO CARD */
+.card .img-box{
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 0px;
+}
+
+/* PARA SUBIR A IMAGEM E DIMINUIR TAMBEM */
+.card:hover .img-box{
+    top: -100px;
+    scale: 0.75;      
+    transition: 0.5s;  
+}
+
+/* DIMINUIR O TAMANHO DA IMAGEM*/
+.card .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ARRUMANDO A DIV DE TEXTO */
+.card .content{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    padding: 0px 30px;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+}
+
+/* PARA O TEXTO APARECER */
+.card:hover .content{
+    top: 130px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+/* ARRUMANDO O BOTÃO */
+.card.read-more{
+    background-color: white;
+    padding: 12px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+}
