@@ -1,15 +1,15 @@
 /* CÓDIGO FEITO POR WILLIANE OLIVEIRA */
 /* Desktop - Responsividade */
 
-:root{
+:root {
     --tyrian-purple: rgb(79, 11, 40);
---davys-gray: rgba(91, 89, 101, 0.466);
---night: #110D12ff;
---tyrian-purple-2: #3A021Bff;
---rose-red: #C11952ff;
---raspberry-rose: rgba(171, 44, 103, 0.377);
---english-violet: #4B3348ff;
---tyrian-purple-3: #5B0B2Eff;
+    --davys-gray: rgba(91, 89, 101, 0.466);
+    --night: #110D12ff;
+    --tyrian-purple-2: #3A021Bff;
+    --rose-red: rgb(193, 25, 81);
+    --raspberry-rose: rgba(171, 44, 103, 0.377);
+    --english-violet: #4B3348ff;
+    --tyrian-purple-3: #5B0B2Eff;
 
 }
 
@@ -28,17 +28,16 @@
     src: url(../fontes/OpenSans.ttf);
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: radial-gradient(var(--night), var(--tyrian-purple-2), var(--tyrian-purple-3));
-    
 }
 
 /* DIV CENTRAL */
-.card{
+.card {
     display: flex;
     justify-content: center;
     width: 350px;
@@ -47,88 +46,81 @@ body{
     /* background: var(--raspberry-rose); */
     background-color: #ffffff63;
     border-radius: 20px;
-    box-shadow: 0px, 35px, 80px rgba(0, 0, 0, 0 0.15); 
+    box-shadow: 0px, 35px, 80px rgba(0, 0, 0, 0 0.15);
     transition: 0.5s;
-    filter: drop-shadow(3px 3px 3px white); 
-
+    filter: drop-shadow(3px 3px 3px white);
 }
 
 /* FONTE NOME */
 h1 {
-    
+
     font-family: 'Arcane';
     font-size: 30px;
     color: var(--tyrian-purple);
-    
 }
 
 /* FONTE DESENVOLVEDORA EXPERIÊNCIA PROFISSIONAL*/
 h2 {
     font-family: 'OpenSans';
     text-transform: uppercase;
-    font-size: large; 
+    font-size: large;
 }
 
 /* FONTE PARA VISUALIZAR */
-h3{
+h3 {
     font-family: "OpenSans";
     font-size: 12px;
     color: var(--tyrian-purple);
-
 }
 
 /* FONTE TODAS AS EXPERIÊNCIAS */
-h4{
+h4 {
     font-style: oblique;
-    /* font-family: "OpenSans-Italic"; */
 }
 
 /* FONTE REDES SOCIAIS */
-h5{
+h5 {
     font-family: "OpenSans";
 }
 
 /* FONTE INSTA E WHATS */
 p {
     font-style: oblique;
-    color: black; 
-    
+    color: black;
 }
 
 /* LINHA */
 hr {
     width: 100%;
     background: var(--night);
-    height: 3px;  
-    
+    height: 3px;
 }
 
 /* ZERANDO AS MARGENS */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* TAMANHO DA IMAGEM INSTA */
-#insta{
+#insta {
     width: 20px;
 }
 
 /* TAMANHO DA IMAGEM WHATS */
-#whats{
-    width: 20px;
+#whats {    width: 20px;
+
 }
 
-
 /* AUMENTAR A ALTURA DA DIV CENTRAL */
-.card:hover{
+.card:hover {
     height: 500px;
-    cursor: pointer;
+    cursor: crosshair;
 }
 
 /* DIMINUIR O TAMANHO DO CARD */
-.card .img-box{
+.card .img-box {
     position: absolute;
     width: 150px;
     height: auto;
@@ -136,14 +128,14 @@ hr {
 }
 
 /* PARA SUBIR A IMAGEM E DIMINUIR TAMBEM */
-.card:hover .img-box{
+.card:hover .img-box {
     top: -50px;
-    scale: 0.75;      
-    transition: 0.5s;  
+    scale: 0.75;
+    transition: 0.5s;
 }
 
 /* DIMINUIR O TAMANHO DA IMAGEM*/
-.card .img-box img{
+.card .img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -151,7 +143,7 @@ hr {
 }
 
 /* ARRUMANDO A DIV DE TEXTO */
-.card .content{
+.card .content {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -165,25 +157,28 @@ hr {
 }
 
 /* PARA O TEXTO APARECER */
-.card:hover .content{
+.card:hover .content {
     top: 130px;
     height: 450px;
     transition: 0.5s;
 }
 
-.card:hover h3{
+/* PARA FAZER AFONTE VISUALIZAR SUMIR */
+.card:hover h3 {
     transition: 0.5s;
     font-size: 0px;
 }
 
-.instaGeral{
+/* DIV DO DAS IMAGENS DE INSTAGRAM E WHATSAPP */
+.instaGeral {
     display: flex;
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.instaGeral div{
+/* DIV DO DAS IMAGENS DE INSTAGRAM E WHATSAPP */
+.instaGeral div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,35 +186,100 @@ hr {
 
 /* Tablet - Responsividade */
 
-@media (max-width:1024px) and (min-width:720px){
-    body{
-        background: var(--reseda-green);
+@media (max-width:1024px) and (min-width:720px) {
+    body {
+        background: linear-gradient(white, var(--tyrian-purple-3));
     }
-    
-    .central{
+
+    .card {
         width: 50%;
+        background: black
     }
-    h3{
-    color: var(--ash-gray);
-    
+
+    /* FONTE NOME */
+    h1 {
+        color: var(--rose-red);
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white;
     }
+
+    /* FONTE DESENVOLVEDORA EXPERIÊNCIA PROFISSIONAL*/
+    h2 {
+        color: aliceblue;
+    }
+
+    /* FONTE PARA VISUALIZAR */
+    h3 {
+        color: var(--rose-red);
+    }
+
+    /* FONTE TODAS AS EXPERIÊNCIAS */
+    h4 {
+
+        color: aliceblue;
+    }
+
+    /* FONTE REDES SOCIAIS */
+    h5 {
+        color: aliceblue;
+    }
+
+    /* FONTE INSTA E WHATS */
+    p {
+        color: aliceblue;
+    }
+
+    /* LINHA */
+    hr {
+        width: 100%;
+        background: var(--rose-red);
+        height: 3px;
+    }
+
 }
 
 /* Mobile - Responsividade */
-@media (max-width:720px){
-    body{
-        background: var(--creme);
+@media (max-width:720px) {
+    body {
+        background: linear-gradient(to left, var(--tyrian-purple), white);
     }
-    
-    .central{
+
+    .card {
         width: 70%;
-        background: var(--cambridge-blue);
+        background: linear-gradient(to left, var(--tyrian-purple), white);
+        filter: drop-shadow(3px 3px 3px white);
     }
 
     h1 {
-        color: var(--reseda-green);
-        /* font-family: ''; */
-        font-size: 30px;
-        
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+        color: var(--tyrian-purple);
+    }
+
+    /* FONTE DESENVOLVEDORA EXPERIÊNCIA PROFISSIONAL*/
+    h2 {
+        color: black;
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+    }
+
+    /* FONTE PARA VISUALIZAR */
+    h3 {
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+    }
+
+    /* FONTE TODAS AS EXPERIÊNCIAS */
+    h4 {
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+        color: black;
+    }
+
+    /* FONTE REDES SOCIAIS */
+    h5 {
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+        color: black;
+    }
+
+    /* FONTE INSTA E WHATS */
+    p {
+        text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+        color: black;
     }
 }
